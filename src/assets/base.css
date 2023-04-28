@@ -1,0 +1,10 @@
+.is-active, .router-link-active {
+  color: #485fc7 !important;
+  background-color: #eceff7 !important;
+}
+.light-section {
+  background-color: #ffffff;
+}
+.icon {
+  margin-right: 5px;
+}
