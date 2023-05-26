@@ -13,9 +13,7 @@ export default defineComponent({
       elementoHTML: ''
     };
   },
-  components: {
-    NavBar,
-  },
+  components: {  },
   mounted() {
     this.scrollChatToBottom();
   },

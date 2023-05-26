@@ -1,0 +1,19 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+  }
+  
+  .bot-message {
+    align-self: flex-start;
+  }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f2f2f2;
+  }

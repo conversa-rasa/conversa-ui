@@ -37,4 +37,26 @@ export default class HttpClient {
             return { error: "Request timeout" }
         }
     }
+
+    async post(path: string, content:string) {
+
+        // Build URL
+        const url: URL = new URL(this.serverURL);
+        url.pathname = path;
+        
+        //console.log("Mi peticion:------: " + content)
+        const response = await fetch(url, {
+            method: 'POST',
+            body: content,
+            headers: {'Content-Type': 'application/json'} });
+
+            if (!response.ok) { /* Handle */ }
+
+            // If you care about a response:
+            if (response.body !== null) {
+                const result = (await response.json());
+                return result; 
+            }
+
+    }
 }

@@ -53,7 +53,10 @@
                   <span class="icon">
                     <i class="bi bi-share"></i>
                   </span>
-                  <span> Share </span>
+                  <RouterLink class="navbar-item" to="/chatbotturismo">
+                    <span> Share </span>
+                  </RouterLink>
+                  
                 </a>
               </p>
             </div>

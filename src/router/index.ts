@@ -58,13 +58,21 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/InteractiveView.vue')
+    },
+    {
+      path: '/chatbotturismo',
+      name: 'chatbotturismo',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ChatbotTurismoView.vue')
     }
   ]
 })
 
 router.beforeEach(async (to) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  const publicPages = ['/login', '/welcome', '/setup'];
+  const publicPages = ['/login', '/welcome', '/setup', '/chatbotturismo'];
   const authRequired = !publicPages.includes(to.path);
   const firstRun = await conversaService.firstRun();
 console.log(authService.auth)
