@@ -15,10 +15,11 @@ export default defineComponent({
       listaMensajes: [
           {
             isBot:1,
-            text:"Hola! Soy TurisBot ¿que te apetece hacer hoy?",
+            text:"Hola! Soy TurisBot ¿en que te puedo ayudar hoy?",
             buttons:[
-              {payload:"Quiero alquilar",title:"Quiero alquilar un vehiculo"},
-              {payload:"ruta senderismo",title:"Ruta senderismo"}
+              {payload:"¿Donde puedo alquilar un vehiculo?",title:"Alquilar un vehiculo"},
+              {payload:"¿Me recomiendasa alguna ruta de senderismo?",title:"Rutas de senderismo"},
+              {payload:"¿Que me recomiendas hacer hoy?",title:"Turismo por Gandia"}
               ]
           }
         ],
