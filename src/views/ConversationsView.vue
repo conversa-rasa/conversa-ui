@@ -17,12 +17,12 @@ export default defineComponent({
   },
   data() {
     return {
-      activeConversationId: null,
+      activeConversationId: '',
       conversationsError: false,
       conversationError: false,
       conversationsLoading: true,
       conversationLoading: true,
-      conversations: null,
+      conversations: [],
       conversation: null,
     };
   },
@@ -34,7 +34,7 @@ export default defineComponent({
         if (data.error) {
           this.conversationsLoading = false;
           this.conversationsError = true;
-          this.conversations = null;
+          this.conversations = [];
           return;
         } else {
           this.conversationsError = false;
@@ -46,7 +46,7 @@ export default defineComponent({
           console.log(this.conversations)
           this.fetchConversation(this.conversations[0][0]);
         } else {
-          this.conversations = null;
+          this.conversations = [];
         }
       });
     },

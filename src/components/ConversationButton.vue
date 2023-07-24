@@ -1,5 +1,5 @@
 <script lang="ts">
-import { dateTime } from "../utils/Datetime.ts";
+import { dateTime } from "../utils/Datetime";
 
 export default {
   props: ["conversation"],

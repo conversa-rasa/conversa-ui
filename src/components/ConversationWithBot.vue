@@ -39,7 +39,7 @@ export default defineComponent({
     },
     sendMessage(textoMensaje:string){
 
-      this.listaMensajes.push({isBot:0,text:textoMensaje,buttons:null})
+      this.listaMensajes.push({isBot:0,text:textoMensaje,buttons:[]})
 
       interactiveService.postMessage(this.USER_ID,textoMensaje).then((response) => {
       this.message = "";
@@ -62,10 +62,12 @@ export default defineComponent({
     },
     scrollChatToBottom() {
       this.$nextTick(() => {
-        var chatDiv = this.$refs.chatDiv;
-        chatDiv.scrollTop = chatDiv.scrollHeight;
-      });
+    const chatDiv = this.$refs.chatDiv;
+    if (chatDiv instanceof HTMLElement) {
+      chatDiv.scrollTop = chatDiv.scrollHeight;
     }
+  });
+}
     
   },
 });
