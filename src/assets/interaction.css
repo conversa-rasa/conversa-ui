@@ -23,3 +23,9 @@
     flex-direction: column;
 
   }
+
+  @media (max-width: 300px) {
+    .chat {
+      flex-direction: column;
+    }
+  }

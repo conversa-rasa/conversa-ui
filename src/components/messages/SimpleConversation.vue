@@ -43,6 +43,8 @@ export default defineComponent({
   margin: 2px 24px;
 }
 
+
+
 .button{
   margin: 5px;
 }
@@ -50,5 +52,13 @@ export default defineComponent({
 .button:hover{
   background-color:#485fc7;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .container-buttons{
+    flex-direction: column;
+
+  }
+  
 }
 </style>
