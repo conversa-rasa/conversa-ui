@@ -27,7 +27,6 @@ export default {
   letter-spacing: 0.6px;
   margin: 0px;
   max-width: 100%;
-  overflow: hidden;
   text-overflow: ellipsis;
   color: rgb(151, 159, 180);
   padding: 8px 24px;

@@ -44,7 +44,7 @@ export default class HttpClient {
         const url: URL = new URL(this.serverURL);
         url.pathname = path;
         
-        //console.log("Mi peticion:------: " + content)
+        console.log("Mi url:------: " +url)
         const response = await fetch(url, {
             method: 'POST',
             body: content,

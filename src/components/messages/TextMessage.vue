@@ -45,8 +45,7 @@ export default {
     v-if="message && message.metadata.utter_action"
     class="chat-message bot-message"
   >
-    <div class="chat-bubble bot-bubble">
-      {{ message.text }}
+    <div v-html="message.text" class="chat-bubble bot-bubble">
     </div>
   </div>
 
