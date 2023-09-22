@@ -40,6 +40,7 @@ export default defineComponent({
               <div class="field">
                 <div class="control">
                   <input
+                    @keyup.enter="login"
                     class="input is-large"
                     type="password"
                     placeholder="Password"
